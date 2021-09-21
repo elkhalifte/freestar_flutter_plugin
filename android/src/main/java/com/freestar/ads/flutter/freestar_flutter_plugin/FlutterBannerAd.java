@@ -49,6 +49,7 @@ public class FlutterBannerAd implements PlatformView, MethodCallHandler, BannerA
         bannerAd = new BannerAd(FreestarFlutterPlugin.activity.get());
         bannerAd.setBannerAdListener(this);
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(-2, -2);
+        layoutParams.gravity = Gravity.CENTER;
         bannerAd.setLayoutParams(layoutParams);
         bannerAdContainer.addView(bannerAd);
         adRequest = new AdRequest(context);
